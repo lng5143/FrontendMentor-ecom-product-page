@@ -20,6 +20,7 @@ html {
 body {
     position: relative;
     padding: 0px;
+    margin: 0px;
 }
 
 #nav-bar {
@@ -199,12 +200,63 @@ hr {
     }
 
     #nav-bar {
-        padding-bottom: 0px;
+        align-items: center;
+        margin: 20px 0px;
+    }
+
+    #logo {
+        margin-right: 50px;
+    }
+
+    #nav-elements {
+        width: 40%;
+        justify-content: space-between;
+        display: flex;
+        align-items: center;
+    }
+
+    .nav-element {
+        position: relative;
+        cursor: pointer;
+    }
+
+    .nav-element::after {
+        content: '';
+        height: 3px;
+        width: 100%;
+        background: #ff7d1a;
+        position: absolute;
+        left: 0px;
+        bottom: -40px;
+        display: none;
+    }
+
+    .nav-element:hover::after {
+        display: block;
+    }
+
+    .element-text {
+        font-size: 0.8rem;
+        opacity: 70%;
+        /* margin-bottom: 50px; */
+    }
+
+    #cart-section {
+        display: flex;
+        align-items: center;
     }
 
     .underline {
         background-color: #ff7d1a;
-        height: 5px;
+        height: 4px;
+        opacity: 100%;
+        margin-top: 50px;
+        /* display: none; */
+    }
+
+    #avatar {
+        width: 40px;
+        height: 40px;
     }
 
     hr {
