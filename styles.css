@@ -259,12 +259,8 @@ hr {
         display: block;
     }
 
-    .underline {
-        background-color: #ff7d1a;
-        height: 4px;
-        opacity: 100%;
-        margin-top: 50px;
-        /* display: none; */
+    #cart-section:hover > #cart-number {
+        display: flex;
     }
 
     #avatar {
@@ -345,6 +341,7 @@ hr {
         padding: 2px;
         right: -5px;
         top: 7px;
+        display: none;
     }
 
     hr {
@@ -358,6 +355,7 @@ hr {
 
     #image-section {
         flex-basis: 50%;
+        padding: 0px 40px;
     }
 
     #main-image {
@@ -368,14 +366,18 @@ hr {
     }
 
     #product-thumbnails {
-        width: 400px;
+        width: 100%;
         display: flex;
         justify-content: space-between;
     }
 
-    #product-thumbnails img{
-        width: 80px;
+    .product-thumbnail{
+        width: 20%;
         border-radius: 10px;
+    }
+
+    .product-thumbnail:hover {
+        opacity: 50%;
     }
 
     .arrow {
