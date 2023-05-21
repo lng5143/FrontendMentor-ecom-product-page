@@ -15,7 +15,11 @@ html {
     background-color: black;
     opacity: 80%;
     z-index: 1;
-    /* display: none; */
+    display: none;
+}
+
+#image-click {
+    display: none;
 }
 
 body {
@@ -26,9 +30,8 @@ body {
 
 #nav-bar {
     display: flex;
-    flex-direction: row;
-    padding: 20px 12px;
-    position: relative;
+    align-items: center;
+    padding: 20px 20px;
 }
 
 #nav-elements {
@@ -37,15 +40,33 @@ body {
 }
 
 #icon-menu {
-    max-width: 100%;
-    max-height: 100%;
+    /* max-width: 100%; */
+    /* max-height: 100%; */
     margin-right: 10px;
+    transform: scale(0.8);
+}
+
+#logo {
+    transform: scale(0.8);
+}
+
+#nav-bar-empty-div {
+    flex-grow: 1;
 }
 
 #cart-avatar {
     display: flex;
-    position: absolute;
+    align-items: center;
     right: 12px;
+}
+
+#cart-section {
+    display: flex;
+    align-items: center;
+}
+
+#icon-cart {
+    transform: scale(0.8);
 }
 
 #cart-float {
@@ -70,14 +91,45 @@ hr {
     position: relative;
 }
 
-#main-image-section .arrow {
-    position: absolute;
-}
 
 #main-image {
     width: 100%;
-    height: 235px;
+    height: 240px;
     object-fit: cover;
+}
+
+#main-image-previous {
+    position: absolute;
+    left: 10px;
+    top: 105px;
+    width: 30px;
+    height: 30px;
+    background-color: #f7f8fd;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#main-image-previous img {
+    transform: scale(0.7);
+}
+
+#main-image-next {
+    position: absolute;
+    right: 10px;
+    top: 105px;
+    width: 30px;
+    height: 30px;
+    background-color: #f7f8fd;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#main-image-next img{
+    transform: scale(0.7);
 }
 
 #product-thumbnails {
@@ -211,7 +263,7 @@ hr {
         left: 50%;
         transform: translateX(-50%);
         margin-top: 100px;
-        /* display: none; */
+        display: none;
     }
 
     #image-click-main-container {
@@ -270,10 +322,6 @@ hr {
         width: 80px;
         height: 80px;
         border-radius: 10px;
-    }
-
-    .image-click-thumbnail:hover {
-        opacity: 50%;
     }
 
     #nav-bar {
@@ -411,7 +459,7 @@ hr {
         border-radius: 8px;
         padding: 2px;
         right: -5px;
-        top: 7px;
+        top: -2px;
         display: none;
     }
 
