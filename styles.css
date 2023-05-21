@@ -252,7 +252,7 @@ hr {
 }
 
 
-@media all and (min-width: 420px) {
+@media all and (min-width: 565px) {
 
     #main-container {
         padding: 0px 100px;
@@ -295,6 +295,10 @@ hr {
         fill: #f7f8fd;
     }
 
+    #image-click-close:hover {
+        fill:#ff7d1a;
+    }
+
     #image-click-next {
         position: absolute;
         right: -25px;
@@ -319,6 +323,11 @@ hr {
         display: flex;
         align-items: center;
         justify-content: center;
+    }
+
+    #image-click-next:hover > #image-click-next-svg
+    {
+        color:#ff7d1a
     }
 
     #image-click-thumbnails-container {
