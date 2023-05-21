@@ -350,6 +350,7 @@ hr {
         justify-content: space-between;
         display: flex;
         align-items: center;
+        z-index: 0;
     }
 
     .nav-element {
