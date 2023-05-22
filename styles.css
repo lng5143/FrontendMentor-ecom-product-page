@@ -49,6 +49,7 @@ body {
 
 #nav-elements img {
     margin-bottom: 40px;
+    cursor: pointer;
 }
 
 #nav-elements div {
@@ -59,6 +60,7 @@ body {
 #icon-menu {
     margin-right: 10px;
     transform: scale(0.8);
+    cursor: pointer;
 }
 
 #logo {
@@ -123,6 +125,7 @@ hr {
     display: flex;
     align-items: center;
     justify-content: center;
+    cursor: pointer;
 }
 
 #main-image-previous img {
@@ -140,6 +143,7 @@ hr {
     display: flex;
     align-items: center;
     justify-content: center;
+    cursor: pointer;
 }
 
 #main-image-next img{
@@ -234,6 +238,10 @@ hr {
     height: 50px;
 }
 
+#quantity-section img {
+    cursor: pointer;
+}
+
 #add-to-cart {
     color: white;
     background-color: #ff7d1a;
@@ -242,7 +250,7 @@ hr {
     display: flex;
     justify-content: center;
     box-shadow: rgba(255, 125, 26, 0.9) 0px 25px 50px -20px;
-    /* box-shadow: rgba(255, 125, 26, 0.7) 0px 25px 20px -20px ; */
+    cursor: pointer;
 }
 
 #add-to-cart svg {
@@ -424,6 +432,21 @@ hr {
         display: none;
         border-radius: 10px;
         z-index: 1;
+    }
+
+    #empty-cart {
+        font-weight: 700;
+        font-size: 0.8rem;
+        opacity: 70%;
+        height: 100%;
+        margin: 0px;
+        padding: 0px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        /* line-height: 100%; */
+        /* display: inline-block; */
+        /* vertical-align: middle; */
     }
 
     #cart-title {
