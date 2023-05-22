@@ -1,6 +1,7 @@
 const overlay = document.querySelector('#overlay');
 const navElements = document.querySelector('#nav-elements');
 const imageClick = document.querySelector('#image-click');
+const imageClickMain = document.querySelector('#image-click-main-image');
 const productQuantity = document.querySelector('#product-quantity');
 const cart = document.querySelector('#cart-float');
 const cartNumber = document.querySelector('#cart-number')
@@ -31,13 +32,26 @@ mainImage.addEventListener('click', openClickImage);
 closeIconClickImage.addEventListener('click', closeClickImage);
 clickNext.addEventListener('click', nextClickImage);
 clickPrevious.addEventListener('click', prevClickImage);
-// mainThumbnails.addEventListener('click', chooseMainImageByThumbnail);
-// clickThumbnails.addEventListener('click', chooseClickImageByThumbnail);
 plus.addEventListener('click', increaseQuantity);
 minus.addEventListener('click', decreaseQuantity);
 addCart.addEventListener('click', addToCart);
 
+for (let i = 0; i < mainThumbnails.length; i++) {
+    mainThumbnails[i].addEventListener('click', () => {
+        mainImage.setAttribute('src', `images/image-product-${i + 1}.jpg`);
+    });
+};
 
+clickThumbnails.forEach((thumbnail, i) => {
+    thumbnail.addEventListener('click', () => {
+        imageClickMain.setAttribute('src', `images/image-product-${i + 1}.jpg`);
+    });
+});
+
+// mainThumbnails[0].addEventListener('click', chooseMainImageByThumbnail(0));
+
+// const mainThumbnailOne = document.querySelector('#product-thumbnail-1');
+// mainThumbnailOne.addEventListener('click', chooseMainImageByThumbnail, 0);
 
 function openMobileMenu() {
     overlay.style.display = 'block';
@@ -61,7 +75,6 @@ function openClickImage() {
     if (mediaQuery.matches) {
         overlay.style.display = 'block';
         imageClick.style.display = 'flex';
-        console.log('open click iamge');
     }
 }
 
@@ -78,9 +91,10 @@ function prevClickImage() {
 
 }
 
-function chooseMainImageByThumbnail() {
-
-}
+// function chooseMainImageByThumbnail(imageNumber) {
+//     mainImage.setAttribute('src', `images/image-product-${imageNumber + 1}.jpg`);
+//     console.log(`image ${imageNumber+1}`);
+// }
 
 function chooseClickImageByThumbnail() {
 
