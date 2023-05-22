@@ -42,6 +42,12 @@ for (let i = 0; i < mainThumbnails.length; i++) {
     mainThumbnails[i].addEventListener('click', () => {
         mainImage.setAttribute('src', `images/image-product-${i + 1}.jpg`);
         currentMainImageNumber = i + 1;
+        mainThumbnails.forEach((thumbnail, i) => {
+            thumbnail.style.opacity = '100%';
+            thumbnail.style.border = 'none';
+        });
+        mainThumbnails[i].style.opacity = '50%';
+        mainThumbnails[i].style.border = '2px solid #ff7d1a';
     });
 };
 
@@ -80,6 +86,8 @@ function openClickImage() {
     if (mediaQuery.matches) {
         overlay.style.display = 'block';
         imageClick.style.display = 'flex';
+        const currentImageSrc = mainImage.getAttribute('src');
+        imageClickMain.setAttribute('src', currentImageSrc);
     }
 }
 
