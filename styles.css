@@ -301,6 +301,7 @@ hr {
         top: -40px;
         right: 0px;
         fill: #f7f8fd;
+        cursor: pointer;
     }
 
     #image-click-close:hover {
@@ -318,6 +319,7 @@ hr {
         display: flex;
         align-items: center;
         justify-content: center;
+        cursor: pointer;
     }
 
     #image-click-previous {
@@ -331,6 +333,7 @@ hr {
         display: flex;
         align-items: center;
         justify-content: center;
+        cursor: pointer;
     }
 
     #image-click-next:hover > #image-click-next-svg
@@ -350,6 +353,7 @@ hr {
         width: 80px;
         height: 80px;
         border-radius: 10px;
+        cursor: pointer;
     }
 
     #nav-bar {
@@ -531,6 +535,7 @@ hr {
         height: 100%;
         border-radius: 15px;
         margin-bottom: 20px;
+        cursor: pointer;
     }
 
     #product-thumbnails {
@@ -542,6 +547,7 @@ hr {
     .product-thumbnail{
         width: 20%;
         border-radius: 10px;
+        cursor: pointer;
     }
 
     .product-thumbnail:hover {

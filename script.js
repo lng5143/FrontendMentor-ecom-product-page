@@ -23,6 +23,8 @@ const addCart = document.querySelector('#add-to-cart');
 const mediaQuery = window.matchMedia('all and (min-width: 565px)');
 
 let quantity = 0;
+let currentMainImageNumber = 1;
+let currentClickImageNumber = 1;
 
 menuIcon.addEventListener('click', openMobileMenu);
 closeIconMenu.addEventListener('click', closeMobileMenu);
@@ -39,19 +41,16 @@ addCart.addEventListener('click', addToCart);
 for (let i = 0; i < mainThumbnails.length; i++) {
     mainThumbnails[i].addEventListener('click', () => {
         mainImage.setAttribute('src', `images/image-product-${i + 1}.jpg`);
+        currentMainImageNumber = i + 1;
     });
 };
 
 clickThumbnails.forEach((thumbnail, i) => {
     thumbnail.addEventListener('click', () => {
         imageClickMain.setAttribute('src', `images/image-product-${i + 1}.jpg`);
+        currentClickImageNumber = i + 1;
     });
 });
-
-// mainThumbnails[0].addEventListener('click', chooseMainImageByThumbnail(0));
-
-// const mainThumbnailOne = document.querySelector('#product-thumbnail-1');
-// mainThumbnailOne.addEventListener('click', chooseMainImageByThumbnail, 0);
 
 function openMobileMenu() {
     overlay.style.display = 'block';
@@ -64,11 +63,17 @@ function closeMobileMenu() {
 }
 
 function nextMainImage() {
-
+    if (currentMainImageNumber < 4) {
+        currentMainImageNumber++;
+        mainImage.setAttribute('src', `images/image-product-${currentMainImageNumber}.jpg`);
+    }
 }
 
 function prevMainImage() {
-
+    if (currentMainImageNumber > 1) {
+        currentMainImageNumber--;
+        mainImage.setAttribute('src', `images/image-product-${currentMainImageNumber}.jpg`);
+    }
 }
 
 function openClickImage() {
@@ -84,20 +89,17 @@ function closeClickImage() {
 }
 
 function nextClickImage() {
-
+    if (currentClickImageNumber < 4) {
+        currentClickImageNumber++;
+        imageClickMain.setAttribute('src', `images/image-product-${currentClickImageNumber}.jpg`);
+    }
 }
 
 function prevClickImage() {
-
-}
-
-// function chooseMainImageByThumbnail(imageNumber) {
-//     mainImage.setAttribute('src', `images/image-product-${imageNumber + 1}.jpg`);
-//     console.log(`image ${imageNumber+1}`);
-// }
-
-function chooseClickImageByThumbnail() {
-
+    if (currentClickImageNumber > 1) {
+        currentClickImageNumber--;
+        imageClickMain.setAttribute('src', `images/image-product-${currentClickImageNumber}.jpg`);
+    }
 }
 
 function increaseQuantity() {
